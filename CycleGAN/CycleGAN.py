@@ -112,8 +112,8 @@ class CycleGAN():
                          loss_weights=loss_weights_D)
 
         # Use containers to avoid falsy keras error about weight descripancies
-        self.D_A_static = Container(inputs=image_A, outputs=guess_A, name='D_A_static_model')
-        self.D_B_static = Container(inputs=image_B, outputs=guess_B, name='D_B_static_model')
+        self.D_A_static = Network(inputs=image_A, outputs=guess_A, name='D_A_static_model')
+        self.D_B_static = Network(inputs=image_B, outputs=guess_B, name='D_B_static_model')
 
         # ======= Generator model ==========
         # Do note update discriminator weights during generator training
