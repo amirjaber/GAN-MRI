@@ -6,7 +6,7 @@ from keras.optimizers import Adam
 from keras.backend import mean
 from keras.models import Model, model_from_json
 from keras.utils import plot_model
-from keras.engine.topology import Container
+from keras.engine.topology import Network
 
 from collections import OrderedDict
 from scipy.misc import imsave, toimage  # has depricated
